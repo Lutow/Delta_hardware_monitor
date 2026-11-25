@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+/* Follow the system light/dark preference for the default page colors. */
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+}
