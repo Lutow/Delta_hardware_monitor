@@ -132,7 +132,19 @@
       <div class="glass-card flex h-full flex-col items-center justify-center gap-5"></div>
     </div>
     <div class="glass-block" style={place(layout.panel2)}>
-      <div class="glass-card flex h-full flex-col items-center justify-center gap-5"></div>
+      <!-- Two equal-height rows. Vertical padding or gaps would shift their centres. -->
+      <div class="glass-card grid h-full grid-rows-2 px-5">
+        <!-- Row 1: two items, pushed to opposite sides -->
+        <div class="flex flex-row items-center justify-between">
+          <div class="text-2xl font-bold">Panel 2</div>
+          <div class="text-2xl font-bold">Panel 2</div>
+        </div>
+
+        <!-- Row 2: one block filling its whole half -->
+        <div class="flex flex-col items-center justify-center">
+          <div class="text-2xl font-bold">Panel 2</div>
+        </div>
+      </div>
     </div>
   {:else}
     <WaitingState />
