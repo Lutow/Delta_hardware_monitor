@@ -1,4 +1,10 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  // Editors can read this file directly. Without these, TypeScript falls back to
+  // the old "node10" lookup, which can't resolve paths like @lucide/svelte/icons/zap.
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  }
 }
