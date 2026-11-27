@@ -112,7 +112,7 @@
 -->
 <main
   class={[
-    'relative isolate grid grid-cols-12 gap-3 overflow-hidden bg-black bg-cover bg-center p-6 text-white',
+    'relative isolate grid grid-cols-12 gap-3 overflow-hidden bg-[url(/background/background.png)] bg-cover bg-center p-6 text-white',
     isPortrait ? 'upright h-256 w-150 grid-rows-24' : 'h-150 w-256 auto-rows-8 content-start',
   ]}
 >
