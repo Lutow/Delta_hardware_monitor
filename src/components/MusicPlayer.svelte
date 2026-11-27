@@ -2,8 +2,6 @@
   import Disc3 from '@lucide/svelte/icons/disc-3';
   import Pause from '@lucide/svelte/icons/pause';
   import Play from '@lucide/svelte/icons/play';
-  import SkipBack from '@lucide/svelte/icons/skip-back';
-  import SkipForward from '@lucide/svelte/icons/skip-forward';
   import { onMount } from 'svelte';
   import { coverUrl, startNowPlayingPolling, type Track } from '../nowPlaying';
 
@@ -81,13 +79,11 @@
 
   <!-- Decoration only: these aren't buttons. The middle one shows what pressing
        it would do: pause while a track plays, play otherwise. -->
-  <div class="flex items-center justify-center gap-8 upright:gap-12" aria-hidden="true">
-    <SkipBack class="size-6 upright:size-9" />
+  <div class="flex items-center justify-center -mt-1 upright:-mt-4 mb-4" aria-hidden="true">
     {#if track?.playing}
       <Pause class="size-7 upright:size-11" />
     {:else}
       <Play class="size-7 upright:size-11" />
     {/if}
-    <SkipForward class="size-6 upright:size-9" />
   </div>
 </div>
