@@ -20,8 +20,8 @@
 </script>
 
 <!-- The parent sets the text style -->
-<div class="flex items-center gap-2">
-  <Timer class="size-7 text-white/70" role="img" aria-label="Time since PC data started" />
+<div class="flex items-center gap-2 upright:flex-col upright:gap-1">
+  <Timer class="size-7 text-white/70 upright:size-10" role="img" aria-label="Time since PC data started" />
   <span class="tabular-nums">
     {startedAt === null ? '--:--:--' : formatDuration(now - startedAt)}
   </span>

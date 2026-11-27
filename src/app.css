@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Larger sizes for the portrait layout, readable on a 7-inch 1024x600 screen.
+   `upright:` applies inside an element with the `upright` class, so it also
+   follows the DEV orientation switch, unlike Tailwind's `portrait:`. */
+@custom-variant upright (&:where(.upright *));
+
 /* Follow the system light/dark preference for the default page colors. */
 @layer base {
   :root {
